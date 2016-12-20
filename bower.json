@@ -1,0 +1,13 @@
+{
+  "name": "PostCardManiaTest",
+  "version": "1.0.0",
+  "ignore": [
+    ".jshintrc"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "html5shiv": "3.7.3",
+    "jquery": "3.1.1",
+    "bootstrap": "bootstrap#3.3.7"
+  }
+}
