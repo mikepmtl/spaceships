@@ -14,13 +14,13 @@
     <!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?ts=<?php echo time();?>">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- JavaScript -->
     <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
 	<script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script src="assets/js/public.js?ts=<?php echo time();?>"></script>
+    <script src="assets/js/public.js"></script>
     <script src="assets/js/public/home/index.js"></script>
 
 </head>
