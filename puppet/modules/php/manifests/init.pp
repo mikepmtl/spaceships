@@ -8,6 +8,7 @@ class php {
               'php-mysql',
               'php-mcrypt',
               'php-curl',
+              'php-xml',
               'mcrypt',
               'php-xdebug',
              ]:
