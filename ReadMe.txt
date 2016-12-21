@@ -27,10 +27,13 @@ Some features of the application:
 
 Development environment:
 
-    - Uses Gulp for SASS to CSS and JS file concatenation, uglifying and minifying as well as a watcher to automatically re-compile SASS.
+    - Uses Gulp for SASS to CSS
+    - Uses Gulp for JS file concatenation, uglifying and minifying.
+    - Gulp file watcher to automatically re-compile SASS during development.
     - Uses Composer for PHP package dependencies (./composer.phar update).
     - User Bower for JS package dependencies (bower update).
-    - Has local development environment using Vagrant. You only need to "vagrant up" to start working on the project.
+    - Has local development environment using Vagrant.
+      You only need to "vagrant up" to start working on the project.
     - PHPUnit tests and coverage.
 
 
