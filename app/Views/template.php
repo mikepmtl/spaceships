@@ -40,7 +40,7 @@
     </div>
 
 
-    <?php echo $content; ?>
+    <?php echo $content ?? 'Template content not set.'; ?>
 
 
 </div>

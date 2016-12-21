@@ -2,7 +2,7 @@
 
     <div class="row">
         <div id="header-pagination" class="col-md-12">
-            <?php echo $page_links; ?>
+            <?php echo $page_links ?? ''; ?>
         </div>
     </div>
 
@@ -13,22 +13,22 @@
 
         <div class="col-md-offset-2 col-md-6">
 
-            <h1><?php echo $ship->name; ?></h1>
+            <h1><?php echo $ship->name ?? 'N/A'; ?></h1>
 
             <div class="spaceship-specs">
-                <strong>Length:</strong> <?php echo $ship->length; ?><br />
-                <strong>Crew:</strong> <?php echo $ship->crew; ?><br />
-                <strong>Passengers:</strong> <?php echo $ship->passengers; ?>
+                <strong>Length:</strong> <?php echo $ship->length ?? 'N/A'; ?><br />
+                <strong>Crew:</strong> <?php echo $ship->crew ?? 'N/A'; ?><br />
+                <strong>Passengers:</strong> <?php echo $ship->passengers ?? 'N/A'; ?>
             </div>
 
             <div class="btn-more-info-wrapper">
-                <input name="More Button" class="btn btn-default show-spaceship-details" type="button" value="More Info &raquo;" data-spaceship-url="<?php echo $ship->url; ?>">
+                <input name="More Button" class="btn btn-default show-spaceship-details" type="button" value="More Info &raquo;" <?php echo isset($ship->url) ? 'data-spaceship-url="' . $ship->url .'"' : 'disabled="disabled"'; ?>>
             </div>
 
         </div>
 
         <div class="col-md-2">
-            <img src="<?php echo $ship->image_path; ?>" class="spaceship img-responsive" alt="<?php echo $ship->name; ?>">
+            <img src="<?php echo $ship->image_path ?? '/assets/img/starships/no_image_available.png'; ?>" class="spaceship img-responsive" alt="<?php echo $ship->name ?? 'N/A'; ?>">
         </div>
 
     </div>
