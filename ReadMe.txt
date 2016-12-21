@@ -1,3 +1,7 @@
+===================================================================================================
+                                            TEST NOTES
+===================================================================================================
+
 
 All source code can be found in the following directories
 
@@ -23,9 +27,9 @@ Some features of the application:
 
 Development environment:
 
-    - Use Gulp for SASS to CSS and JS file concatenation, uglifying and minifying as well as a watcher to automatically re-compile SASS.
-    - Uses Composer for PHP package dependencies.
-    - User Bower for JS package dependencies.
+    - Uses Gulp for SASS to CSS and JS file concatenation, uglifying and minifying as well as a watcher to automatically re-compile SASS.
+    - Uses Composer for PHP package dependencies (./composer.phar update).
+    - User Bower for JS package dependencies (bower update).
     - Has local development environment using Vagrant. You only need to "vagrant up" to start working on the project.
     - PHPUnit tests and coverage.
 
