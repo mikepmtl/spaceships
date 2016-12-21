@@ -129,16 +129,23 @@ class Cache {
 	}
 
 
-
 	/**
-	 *
 	 * Look to see if we have the cache file and if so load it into $data
+	 *
+	 * @param null $hash The hash of the URL for the file name.
 	 *
 	 * @return bool
 	 */
-	private function hasValidCache(){
+	private function hasValidCache($hash=null){
 
-		$cache_file = CACHE_DIR . "/" . $this->hash;
+		if( !$hash ) $hash = $this->hash;
+
+		if( !$hash ){
+			Log::info( "Received empty hash for Cache." );
+			return false;
+		}
+
+		$cache_file = CACHE_DIR . "/" . $hash;
 
 		if( file_exists( $cache_file ) ){
 
@@ -150,7 +157,7 @@ class Cache {
 			}
 
 			// Check the age of the cache
-			if( time() > $last_modified + CACHE_TTL ){
+			if( is_file($cache_file) && time() > $last_modified + CACHE_TTL ){
 				Log::info( "Cache file expired. Deleting: "  . $cache_file );
 				unlink ( $cache_file );
 				return false;

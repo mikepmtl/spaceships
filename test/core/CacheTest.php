@@ -1,6 +1,7 @@
 <?php
 
 
+use Core\Cache;
 use \Core\Exceptions\ExceptionCacheInvalidURL;
 
 
@@ -10,7 +11,7 @@ class Test_Cache extends PHPUnit_Framework_TestCase
 
 	public function testModelInstantiation(){
 
-		$cache = new Core\Cache();
+		$cache = new Cache();
 		$this->assertInstanceOf('Core\Cache', $cache, 'Unable to instantiate Cache instance');
 
 	}
@@ -18,7 +19,7 @@ class Test_Cache extends PHPUnit_Framework_TestCase
 	public function testFailOnBadURL(){
 
 		$url = "ht://doesnot.work";
-		$cache = new Core\Cache();
+		$cache = new Cache();
 
 		$this->setExpectedException( ExceptionCacheInvalidUrl::class );
 
@@ -28,6 +29,17 @@ class Test_Cache extends PHPUnit_Framework_TestCase
 			$this->assertContains('Invalid URL', $e->getMessage());
 			throw $e;
 		}
+
+	}
+
+
+	public function testDoesNotHaveValidCache() {
+
+		$method = new \ReflectionMethod('\\Core\\Cache', 'hasValidCache');
+		$method->setAccessible(true);
+
+		$result = $method->invoke( new Cache(), 'THISWILLNOTEXIST');
+		$this->assertFalse($result);
 
 	}
 

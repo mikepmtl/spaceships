@@ -57,11 +57,13 @@ class Log {
 	 * Log an info message
 	 *
 	 * @param string $message
+	 *
+	 * @return bool If the message was handle successfully
 	 */
 	public static function info($message=""){
 
 		$logger = self::getInstance();
-		$logger->log->info($message);
+		return $logger->log->info($message);
 
 	}
 
