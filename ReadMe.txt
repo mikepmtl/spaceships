@@ -1,3 +1,40 @@
+
+All source code can be found in the following directories
+
+/app   - Main application code
+/core  - Core classes to support application
+/js    - NameSpace Pattern ECMAScript (JS) files
+/sass  - SASS files
+/test  - PHPUnit tests
+
+Other folder:
+
+/bin    - helper scripts (fix permissions)
+/puppet - Puppet scripts to configure Virtual Machine
+
+
+Some features of the application:
+
+    - Cache - Uses a File based Cache for the PHP API calls. TTL configurable in config.php.
+    - Logging - Has a singleton Logging class to allow file based logging.
+    - Uses ECMAScript (JS) NameSpace Pattern for organization and to avoid any variable/method clashes.
+    - JS Ajax calls to API for model details (simply to demonstrate usage).
+    - Class Auto-loading via composer.
+
+Development environment:
+
+    - Use Gulp for SASS to CSS and JS file concatenation, uglifying and minifying as well as a watcher to automatically re-compile SASS.
+    - Uses Composer for PHP package dependencies.
+    - User Bower for JS package dependencies.
+    - Has local development environment using Vagrant. You only need to "vagrant up" to start working on the project.
+    - PHPUnit tests and coverage.
+
+
+
+
+===================================================================================================
+
+
 # PostcardMania Developer Test
 
 Overall goals of this test:
